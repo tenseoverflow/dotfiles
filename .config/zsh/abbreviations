@@ -1,0 +1,5 @@
+abbr di='dnf install'
+abbr ds='dnf search'
+abbr dr='dnf uninstall'
+abbr e='exit'
+abbr :q='exit'
