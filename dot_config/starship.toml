@@ -9,15 +9,7 @@ disabled = true
 [character]                         # The name of the module we are configuring is "character"
 success_symbol = "[➜](bold green)"  # The "success_symbol" is set to "➜" with color "bold green"
 error_symbol = "[➜](bold red)"
-vicmd_symbol = "[:](bold blue)"
-
-[directory]
-truncation_length = 3
-truncation_symbol = "../"
-
-[status]
-disabled = true
-format = "[$symbol]($style) "
+vicmd_symbol = "[➜](bold blue)"
 
 # Use custom format
 # format = """
