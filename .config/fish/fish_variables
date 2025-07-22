@@ -13,7 +13,6 @@ SETUVAR --export DOTNET_CLI_HOME:/home/hen/\x2elocal/share/dotnet
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_CTRL_T_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow\x20\x2d\x2dhidden\x20\x2d\x2dcolor\x3dalways
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow\x20\x2d\x2dhidden\x20\x2d\x2dcolor\x3dalways
-SETUVAR --export GEMINI_API_KEY:AIzaSyARjdfG8yDUKDd54p_KLccdHJx5MyOsZxs
 SETUVAR --export GIT_PAGER:bat\x1e\x2d\x2dcolor\x3dalways\x1e\x2dl\x1ers
 SETUVAR --export GNUPGHOME:/home/hen/\x2elocal/share/gnupg
 SETUVAR --export --path GOPATH:/home/hen/\x2elocal/share/go
