@@ -1,42 +1,39 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export ANSIBLE_HOME:/home/hen/\x2econfig/ansible
-SETUVAR --export BUNDLE_USER_CACHE:/home/hen/\x2ecache/bundle
-SETUVAR --export BUNDLE_USER_CONFIG:/home/hen/\x2econfig/bundle
-SETUVAR --export BUNDLE_USER_PLUGIN:/home/hen/\x2elocal/share/bundle
-SETUVAR --export BUN_INSTALL:/home/hen/\x2elocal/share/bun
-SETUVAR --export CARGO_HOME:/home/hen/\x2elocal/share/cargo
-SETUVAR --export --path CUDA_CACHE_PATH:/home/hen/\x2ecache/nv
-SETUVAR --export DENO_INSTALL:/home/hen/\x2elocal/share/deno
-SETUVAR --export DENO_INSTALL_ROOT:/home/hen/\x2elocal/bin/deno
-SETUVAR --export DOTNET_CLI_HOME:/home/hen/\x2elocal/share/dotnet
+SETUVAR --export ANSIBLE_Users:/home/henriaunin/\x2econfig/ansible
+SETUVAR --export BUNDLE_USER_CACHE:/Users/henriaunin/\x2ecache/bundle
+SETUVAR --export BUNDLE_USER_CONFIG:/Users/henriaunin/\x2econfig/bundle
+SETUVAR --export BUNDLE_USER_PLUGIN:/Users/henriaunin/\x2elocal/share/bundle
+SETUVAR --export BUN_INSTALL:/Users/henriaunin/\x2elocal/share/bun
+SETUVAR --export CARGO_Users:/home/henriaunin/\x2elocal/share/cargo
+SETUVAR --export --path CUDA_CACHE_PATH:/Users/henriaunin/\x2ecache/nv
+SETUVAR --export DENO_INSTALL:/Users/henriaunin/\x2elocal/share/deno
+SETUVAR --export DENO_INSTALL_ROOT:/Users/henriaunin/\x2elocal/bin/deno
+SETUVAR --export DOTNET_CLI_Users:/home/henriaunin/\x2elocal/share/dotnet
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_CTRL_T_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow\x20\x2d\x2dhidden\x20\x2d\x2dcolor\x3dalways
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow\x20\x2d\x2dhidden\x20\x2d\x2dcolor\x3dalways
 SETUVAR --export GIT_PAGER:bat\x1e\x2d\x2dcolor\x3dalways\x1e\x2dl\x1ers
-SETUVAR --export GNUPGHOME:/home/hen/\x2elocal/share/gnupg
-SETUVAR --export --path GOPATH:/home/hen/\x2elocal/share/go
-SETUVAR --export GPG_TTY:/dev/pts/1
-SETUVAR --export HISTFILE:/home/hen/\x2elocal/state/bash/history
-SETUVAR --export LESSHISTFILE:/home/hen/\x2econfig/less/history
-SETUVAR --export LESSKEY:/home/hen/\x2econfig/less/keys
-SETUVAR --export MPD_HOST:/home/hen/\x2econfig/mpd/socket
-SETUVAR --export NODE_REPL_HISTORY:/home/hen/\x2elocal/share/node_repl_history
-SETUVAR --export NPM_CONFIG_CACHE:/home/hen/\x2ecache/npm
-SETUVAR --export NPM_CONFIG_INIT_MODULE:/home/hen/\x2econfig/npm/config/npm\x2dinit\x2ejs
+SETUVAR --export --path GOPATH:/Users/henriaunin/\x2elocal/share/go
+SETUVAR --export HISTFILE:/Users/henriaunin/\x2elocal/state/bash/history
+SETUVAR --export LESSHISTFILE:/Users/henriaunin/\x2econfig/less/history
+SETUVAR --export LESSKEY:/Users/henriaunin/\x2econfig/less/keys
+SETUVAR --export NODE_REPL_HISTORY:/Users/henriaunin/\x2elocal/share/node_repl_history
+SETUVAR --export NPM_CONFIG_CACHE:/Users/henriaunin/\x2ecache/npm
+SETUVAR --export NPM_CONFIG_INIT_MODULE:/Users/henriaunin/\x2econfig/npm/config/npm\x2dinit\x2ejs
 SETUVAR --export NPM_CONFIG_TMP:/run/user/1000/npm
-SETUVAR --export NPM_CONFIG_USERCONFIG:/home/hen/\x2econfig/npm/npmrc
-SETUVAR --export --path PATH:/home/hen/\x2elocal/share/cargo/bin\x1e/home/hen/\x2elocal/share/\x2e\x2e/bin\x1e/home/hen/\x2elocal/share/cargo/bin\x1e/usr/local/bin\x1e/home/hen/\x2elocal/share/cargo/bin\x1e/usr/bin
-SETUVAR --export PYTHONSTARTUP:/home/hen/\x2econfig/python/pythonrc
-SETUVAR --export RUSTUP_HOME:/home/hen/\x2elocal/share/rustup
-SETUVAR --export SOLARGRAPH_CACHE:/home/hen/\x2ecache/solargraph
-SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/gnupg/d\x2eobr9tzppoifg1qoasn1y8bbe/S\x2egpg\x2dagent\x2essh
+SETUVAR --export NPM_CONFIG_USERCONFIG:/Users/henriaunin/\x2econfig/npm/npmrc
+SETUVAR --export --path PATH:/Users/henriaunin/\x2elocal/share/cargo/bin\x1e/home/hen/\x2elocal/share/\x2e\x2e/bin\x1e/home/hen/\x2elocal/share/cargo/bin\x1e/usr/local/bin\x1e/home/hen/\x2elocal/share/cargo/bin\x1e/usr/bin
+SETUVAR --export PYTHONSTARTUP:/Users/henriaunin/\x2econfig/python/pythonrc
+SETUVAR --export RUSTUP_Users:/home/henriaunin/\x2elocal/share/rustup
+SETUVAR --export SAM_CLI_TELEMETRY:0
+SETUVAR --export SOLARGRAPH_CACHE:/Users/henriaunin/\x2ecache/solargraph
 SETUVAR --export VISUAL:nvim
-SETUVAR --export WGETRC:/home/hen/\x2econfig/wget/wgetrc
-SETUVAR --export XDG_CACHE_HOME:/home/hen/\x2ecache
-SETUVAR --export XDG_CONFIG_HOME:/home/hen/\x2econfig
-SETUVAR --export XDG_DATA_HOME:/home/hen/\x2elocal/share
-SETUVAR --export XDG_STATE_HOME:/home/hen/\x2elocal/state
+SETUVAR --export WGETRC:/Users/henriaunin/\x2econfig/wget/wgetrc
+SETUVAR --export XDG_CACHE_Users:/home/henriaunin/\x2ecache
+SETUVAR --export XDG_CONFIG_Users:/home/henriaunin/\x2econfig
+SETUVAR --export XDG_DATA_Users:/home/henriaunin/\x2elocal/share
+SETUVAR --export XDG_STATE_Users:/home/henriaunin/\x2elocal/state
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR --export editor:nvim
@@ -68,3 +65,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/Users/henriaunin/\x2elocal/bin
