@@ -1,12 +1,11 @@
 # exa
-alias l='exa -lhF --git --color=always --icons --sort=size --group-directories-first'
-alias la='exa -lahF --git --color=always --icons --sort=size --group-directories-first'
-alias ls='exa'
-alias lst='exa -lahFT --git --color=always --icons --sort=size --group-directories-first'
+alias l='eza -lhF --git --color=always --icons --sort=size --group-directories-first'
+alias la='eza -lahF --git --color=always --icons --sort=size --group-directories-first'
+alias ls='eza'
+alias lst='eza -lahFT --git --color=always --icons --sort=size --group-directories-first'
 
 # if you have doas
-alias sudo='sudo-rs'
-alias su='su-rs'
+#alias sudo='sudo-rs' alias su='su-rs'
 
 # just command things
 alias cat='bat'

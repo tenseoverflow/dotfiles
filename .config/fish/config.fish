@@ -1,9 +1,9 @@
 if status is-interactive
     # GPG
-    set -x GPG_TTY (tty)
-    set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-    gpgconf --launch gpg-agent
-    gpg-connect-agent updatestartuptty /bye >/dev/null
+    #    set -x GPG_TTY (tty)
+    #    set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+    #gpgconf --launch gpg-agent
+    #gpg-connect-agent updatestartuptty /bye >/dev/null
 
     abbr -a !! --position anywhere --function last_history_item
     abbr -a !\$ --position anywhere --function last_history_token
@@ -26,3 +26,10 @@ source "$HOME/.config/fish/functions/last_command.fish"
 # settings
 
 set fish_greeting
+
+# uv
+fish_add_path "/Users/henriaunin/.local/bin"
+
+# bun
+set --export BUN_INSTALL "$HOME/.local/share/bun"
+set --export PATH $BUN_INSTALL/bin $PATH
