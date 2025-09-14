@@ -33,3 +33,4 @@ fish_add_path "$HOME/.local/bin"
 # bun
 set --export BUN_INSTALL "$HOME/.local/share/bun"
 fish_add_path "$BUN_INSTALL/bin"
+fish_add_path $HOME/.local/bin
