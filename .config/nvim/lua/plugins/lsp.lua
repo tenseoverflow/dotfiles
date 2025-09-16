@@ -1,12 +1,5 @@
 return {
   {
-    "mason-org/mason.nvim",
-    lazy = false,
-    config = function()
-      require("mason").setup()
-    end,
-  },
-  {
     "mason-org/mason-lspconfig.nvim",
     dependencies = {
       "mason-org/mason.nvim",
@@ -14,6 +7,7 @@ return {
     },
     lazy = false,
     config = function()
+      require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",

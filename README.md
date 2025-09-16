@@ -6,7 +6,7 @@ Also check out my [infrastructure repo](https://github.com/tenseoverflow/infrast
 
 ## Get started
 
-Install the soft. 
+Install the soft.
 
 ```
 sudo dnf install bat exa dua-cli ripgrep wget2 procs duf sudo-rs neovim fzf
@@ -28,10 +28,10 @@ yadm clone git@github.com:tenseoverflow/dotfiles.git
 
 Pretty much the latest Fedora Workstation for my personal computers:
 
-- Desktop (AMD Ryzen 3700x, RTX 2060 Super (ugh), ASUS TUF B550, 16gb DDR4), that I dual boot with Windows 11, however I don't use it that much anymore
-- Thinkpad X250 that I've repaired since buying it second-hand
+- Desktop (AMD Ryzen 3700x, RTX 2060 Super, ASUS TUF B550, 16gb DDR4), that I dual boot with Windows 11, however I don't use it that much anymore.
+- Thinkpad X250 that I've repaired since buying it second-hand.
 
-Also MacOS.
+Also MacOS with ARM chips.
 
 ## Soft that I use regularly
 
@@ -41,14 +41,13 @@ Pretty happy with the current setup and always refining it for my own liking.
 ### CLI
 
 - Fish for my shell, does the job. Uses VIM keybindings. Too lazy nowadays to refine ZSH for my own liking.
-- Starship for the prompt. Was my first custom and still using it.
-- Neovim, which I've set up with [Lazyvim](https://github.com/LazyVim/LazyVim). \
-The name implies why I'm using Folke's great package manager paired with his neovim template. At some point I was using Neovim as my main editor and I needed some of the flashy plugins + LSP support. Honestly I should probably start my own minimalistic config.
-- GPG, SSH on my yubikey. Thanks to [ddruh amazing guide](https://github.com/drduh/YubiKey-Guide)!
-- bat, exa, dua-cli, ripgrep, wget2, procs, duf, sudo-rs for cool Rust+ alternatives
+- Starship for the prompt.
+- Neovim with my trying-to-be minimal config.
+- GPG, SSH on my yubikey. This includes git signing. Thanks to [ddruh amazing guide](https://github.com/drduh/YubiKey-Guide)!
+- bat, exa, dua-cli, ripgrep, wget2, procs, duf, sudo-rs, fzf for cool Rust+ alternatives
 
 ### GUI
 
 - VSCode + Cursor for my IDE. With vim emulation.
-- Ghostty + Warp for my terminal.
-- Firefox with side tabs. Maybe Safari too.
+- Ghostty for my main terminal.
+- Firefox with side tabs (and GNOME theme for Linux). Maybe Safari too.

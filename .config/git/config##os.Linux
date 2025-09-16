@@ -31,7 +31,7 @@
 	helper = !/usr/bin/gh auth git-credential
 
 [user]
-  #signingkey = 0x881C29EAEDFD14C1
+  signingkey = 0x881C29EAEDFD14C1
 	email = contact@hen.ee
 	name = tenseoverflow
 [push]
@@ -39,11 +39,11 @@
 	autoSetupRemote = true
   followTags = true
 [commit]
-  #gpgSign = true
+  gpgSign = true
   verbose = true
 [tag]
   sort = version:refname
-  #gpgSign = true
+  gpgSign = true
 [init]
 	defaultBranch = main
 [pull]

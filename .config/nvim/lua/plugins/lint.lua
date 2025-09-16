@@ -1,6 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
-  ft = { "vue", "typescript", "typescriptreact", "javascript", "fish" },
+  ft = { "vue", "typescript", "typescriptreact", "javascript" },
   config = function()
     local util = require("lspconfig.util")
 
@@ -9,7 +9,6 @@ return {
       typescript = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       javascript = { "eslint_d" },
-      fish = { "fish" },
       sql = { "sqlfluff" },
     }
 

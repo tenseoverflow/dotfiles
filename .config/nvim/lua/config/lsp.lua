@@ -3,13 +3,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
-      vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-      vim.keymap.set("i", "<C-Space>", function()
-        vim.lsp.completion.get()
-      end)
-    end
+    -- if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
+    --   vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
+    --   vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    --   vim.keymap.set("i", "<C-Space>", function()
+    --     vim.lsp.completion.get()
+    --   end)
+    -- end
 
     if
         not client:supports_method("textDocument/willSaveWaitUntil")
@@ -35,7 +35,9 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("clangd")
 vim.lsp.enable("pyright")
 vim.lsp.enable("ruff")
-vim.lsp.enable("jdtls")
+vim.lsp.enable("ltex-ls-plus")
+vim.lsp.enable("svelte-language-server")
+-- vim.lsp.enable("vtsls")
 
 -- Configure diagnostics
 vim.diagnostic.config({

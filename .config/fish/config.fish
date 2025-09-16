@@ -1,9 +1,8 @@
 if status is-interactive
     # GPG
-    #    set -x GPG_TTY (tty)
-    #    set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-    #gpgconf --launch gpg-agent
-    #gpg-connect-agent updatestartuptty /bye >/dev/null
+    set -x GPG_TTY (tty)
+    set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
 
     abbr -a !! --position anywhere --function last_history_item
     abbr -a !\$ --position anywhere --function last_history_token
@@ -33,4 +32,3 @@ fish_add_path "$HOME/.local/bin"
 # bun
 set --export BUN_INSTALL "$HOME/.local/share/bun"
 fish_add_path "$BUN_INSTALL/bin"
-fish_add_path $HOME/.local/bin
