@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export ANSIBLE_HOME:/home/hen/\x2econfig/ansible
+SETUVAR --export AWS_CONFIG_FILE:/home/hen/\x2econfig/aws/config
+SETUVAR --export AWS_SHARED_CREDENTIALS_FILE:/home/hen/\x2econfig/aws/credentials
 SETUVAR --export BUNDLE_USER_CACHE:/home/hen/\x2ecache/bundle
 SETUVAR --export BUNDLE_USER_CONFIG:/home/hen/\x2econfig/bundle
 SETUVAR --export BUNDLE_USER_PLUGIN:/home/hen/\x2elocal/share/bundle

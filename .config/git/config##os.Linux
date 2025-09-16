@@ -37,7 +37,6 @@
 [push]
 	gpgSign = if-asked
 	autoSetupRemote = true
-  default = simple
   followTags = true
 [commit]
   #gpgSign = true

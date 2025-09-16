@@ -42,6 +42,6 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = OneHalfDark
+theme = dark:Sublette,light:OneHalfLight
 font-family = Source Code Pro
 shell-integration = fish
