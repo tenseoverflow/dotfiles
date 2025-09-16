@@ -28,3 +28,10 @@ alias dnsinfo='dig +noall +answer +additional $argv[1] @dns.toys'
 # GPG yubikey
 alias resetgpg='gpg-connect-agent killagent /bye; gpg-connect-agent updatestartuptty /bye -q; gpg-connect-agent /bye'
 alias different-yubi='gpg-connect-agent "scd setialno" "learn --force" /bye'
+
+# zk 
+alias zke='zk edit --interactive'
+alias zkn='zk --title'
+
+# git
+alias gc='git commit -a && git push'

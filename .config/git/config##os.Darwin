@@ -1,0 +1,69 @@
+[core]
+  excludesfile = ~/.gitignore
+  pager = bat
+  #editor=flatpak run re.sonny.Commit
+  # fsmonitor = true
+  untrackedCache = true
+
+#[re.sonny.Commit]
+#  title-length-hint=50
+#  body-length-wrap=72
+#  auto-capitalize-title=true
+
+[merge]
+  conflictstyle = zdiff3
+[difftool]
+  prompt = true
+[diff]
+  colorMoved = plain
+  tool = nvimdiff
+  algorithm = histogram
+  mnemonicPrefix = true
+  renames = true
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[user]
+  signingkey = 0x881C29EAEDFD14C1
+	email = contact@hen.ee
+	name = tenseoverflow
+[push]
+	gpgSign = if-asked
+	autoSetupRemote = true
+  default = simple
+  followTags = true
+[commit]
+  gpgSign = true
+  verbose = true
+[tag]
+  sort = version:refname
+  gpgSign = true
+[init]
+	defaultBranch = main
+[pull]
+  rebase = true
+
+[help]
+  autocorrect = prompt
+[rerere]
+  enabled = true
+  autoupdate = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true

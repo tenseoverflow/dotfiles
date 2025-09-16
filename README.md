@@ -9,7 +9,7 @@ Also check out my [infrastructure repo](https://github.com/tenseoverflow/infrast
 Install the soft. 
 
 ```
-sudo dnf install bat exa dua-cli ripgrep wget2 procs duf sudo-rs
+sudo dnf install bat exa dua-cli ripgrep wget2 procs duf sudo-rs neovim fzf
 ```
 
 Install yadm.
