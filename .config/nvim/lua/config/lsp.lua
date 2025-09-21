@@ -31,10 +31,10 @@ vim.opt.pumheight = 13
 -- Server configurations are loaded from ~/.config/nvim/lsp/ directory
 
 -- Enable all configured LSP servers
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("clangd")
-vim.lsp.enable("pyright")
-vim.lsp.enable("ruff")
+-- vim.lsp.enable("lua_ls")
+-- vim.lsp.enable("clangd")
+-- vim.lsp.enable("pyright")
+-- vim.lsp.enable("ruff")
 vim.lsp.enable("ltex-ls-plus")
 vim.lsp.enable("svelte-language-server")
 -- vim.lsp.enable("vtsls")

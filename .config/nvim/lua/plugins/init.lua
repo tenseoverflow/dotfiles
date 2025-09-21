@@ -4,7 +4,11 @@ return {
     priority = 1000,
     config = function()
       require("onedark").setup({
-        style = "dark",
+        style = "deep",
+
+        lualine = {
+          transparent = true, -- lualine center bar transparency
+        },
       })
 
       require("onedark").load()
@@ -21,7 +25,7 @@ return {
       auto_insert_mode = true,
     },
     keys = {
-      { "<leader>cc", "<cmd>CopilotChat<cr>" }
-    }
+      { "<leader>cc", "<cmd>CopilotChat<cr>" },
+    },
   },
 }

@@ -15,7 +15,7 @@ return {
 		}, ]]
     image = { enabled = true },
     notifier = { enabled = true },
-    scroll = { enabled = true },
+    -- scroll = { enabled = true },
     picker = {
       enabled = true,
     },
@@ -33,54 +33,60 @@ return {
         Snacks.picker.smart({
           multi = {
             { finder = "buffers", current = false },
-            { finder = "files",   exclude = { current_file } },
             { finder = "recent",  exclude = { current_file } },
+            { finder = "files",   exclude = { current_file } },
           },
         })
       end,
     },
     {
-      "<leader>fr",
+      "<c-tab>",
       function()
-        local cwd = vim.loop.cwd()
-
-        Snacks.picker.recent({
-          filter = {
-            paths = {
-              [cwd] = true,
-              [cwd .. "/node_modules"] = false,
-            },
-          },
-        })
+        Snacks.picker.buffers()
       end,
     },
+    -- {
+    --   "<leader>fr",
+    --   function()
+    --     local cwd = vim.loop.cwd()
+    --
+    --     Snacks.picker.recent({
+    --       filter = {
+    --         paths = {
+    --           [cwd] = true,
+    --           [cwd .. "/node_modules"] = false,
+    --         },
+    --       },
+    --     })
+    --   end,
+    -- },
     {
-      "<leader>fg",
+      "<leader>gg",
       function()
         Snacks.picker.git_status()
       end,
     },
     {
-      "<leader>fd",
+      "<leader>gl",
       function()
         Snacks.picker.git_log()
       end,
     },
     {
-      "<leader>fb",
+      "<leader>gb",
       function()
         Snacks.git.blame_line()
       end,
     },
     {
-      "<leader>fo",
+      "<leader>go",
       function()
         Snacks.gitbrowse.open()
       end,
     },
 
     {
-      "<leader>fh",
+      "<leader>h",
       function()
         Snacks.picker.help()
       end,
@@ -96,6 +102,20 @@ return {
       function()
         Snacks.explorer.open()
       end,
+    },
+    {
+      "<leader>:",
+      function()
+        Snacks.picker.command_history()
+      end,
+      desc = "Command History",
+    },
+    {
+      "<leader>n",
+      function()
+        Snacks.picker.notifications()
+      end,
+      desc = "Notification History",
     },
   },
 }

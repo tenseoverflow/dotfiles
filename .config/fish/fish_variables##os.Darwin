@@ -15,7 +15,7 @@ SETUVAR --export FZF_CTRL_T_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2d\x2dtype\x20file\x20\x2d\x2dfollow\x20\x2d\x2dhidden\x20\x2d\x2dcolor\x3dalways
 SETUVAR --export GIT_PAGER:bat\x1e\x2d\x2dcolor\x3dalways\x1e\x2dl\x1ers
 SETUVAR --export --path GOPATH:/Users/henriaunin/\x2elocal/share/go
-SETUVAR --export GPG_TTY:/dev/pts/1
+SETUVAR --export GPG_TTY:/dev/ttys009
 SETUVAR --export HISTFILE:/Users/henriaunin/\x2elocal/state/bash/history
 SETUVAR --export LESSHISTFILE:/Users/henriaunin/\x2econfig/less/history
 SETUVAR --export LESSKEY:/Users/henriaunin/\x2econfig/less/keys

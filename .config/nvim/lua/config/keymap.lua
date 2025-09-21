@@ -1,6 +1,6 @@
 ---[[ - ]]-[[ - ]]-[[ - ]] completion
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>")
-vim.keymap.set("n", "<leader>e", "<Cmd>Ntree<CR>")
+--vim.keymap.set("n", "<leader>e", "<Cmd>Ntree<CR>")
 
 vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>k", "<C-w>k")
