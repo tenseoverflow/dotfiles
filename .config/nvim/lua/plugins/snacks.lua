@@ -79,6 +79,13 @@ return {
       end,
     },
     {
+      "<leader>gs",
+      function()
+        Snacks.picker.git_stash()
+      end,
+      desc = "Git Stash",
+    },
+    {
       "<leader>go",
       function()
         Snacks.gitbrowse.open()
