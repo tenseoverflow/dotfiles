@@ -32,3 +32,9 @@ fish_add_path "$HOME/.local/bin"
 # bun
 set --export BUN_INSTALL "$HOME/.local/share/bun"
 fish_add_path "$BUN_INSTALL/bin"
+
+# cargo
+fish_add_path "$HOME/.local/share/cargo/bin"
+
+# opencode
+fish_add_path /home/hen/.opencode/bin
