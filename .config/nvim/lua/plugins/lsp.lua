@@ -12,9 +12,10 @@ return {
         ensure_installed = {
           "lua_ls",
           "clangd",
-          "pyright",
+          "pyrefly",
           "ruff",
           "jdtls",
+          "biome",
         },
       })
     end,

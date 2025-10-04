@@ -16,7 +16,7 @@
   prompt = true
 [diff]
   colorMoved = plain
-  tool = nvimdiff
+  tool = vimdiff
   algorithm = histogram
   mnemonicPrefix = true
   renames = true

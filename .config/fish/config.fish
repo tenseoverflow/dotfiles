@@ -21,6 +21,7 @@ source "$HOME/.config/fish/conf.d/vim.fish"
 
 # functions
 source "$HOME/.config/fish/functions/last_command.fish"
+source "$HOME/.config/fish/functions/git_commit_helper.fish"
 
 # settings
 
@@ -37,4 +38,6 @@ fish_add_path "$BUN_INSTALL/bin"
 fish_add_path "$HOME/.local/share/cargo/bin"
 
 # opencode
-fish_add_path /home/hen/.opencode/bin
+fish_add_path "$HOME/.opencode/bin"
+
+fish_add_path "/opt/homebrew/opt/ruby/bin"

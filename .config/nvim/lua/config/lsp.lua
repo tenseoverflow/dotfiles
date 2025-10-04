@@ -11,7 +11,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
     --   end)
     -- end
 
-    if
+    if client.name == "biome" then
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = vim.api.nvim_create_augroup("BiomeFixAll", { clear = true }),
+        callback = function()
+          vim.lsp.buf.code_action({
+            context = {
+              only = { "source.fixAll.biome" },
+              diagnostics = {},
+            },
+            apply = true,
+          })
+        end,
+      })
+    elseif
         not client:supports_method("textDocument/willSaveWaitUntil")
         and client:supports_method("textDocument/formatting")
     then
