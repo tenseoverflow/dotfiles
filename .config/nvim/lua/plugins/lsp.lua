@@ -11,11 +11,21 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
+          "yamlls",
+          -- shell
+          "fish_lsp",
+          "bashls",
+          -- C
           "clangd",
+          -- python
           "pyrefly",
           "ruff",
-          "jdtls",
-          "biome",
+          "taplo",
+          -- java
+          -- "java-language-server",
+          -- "jdtls",
+          -- js
+          "svelte",
         },
       })
     end,
@@ -86,9 +96,23 @@ return {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
+    dependenices = { "copilotlsp-nvim/copilot-lsp" },
     config = function()
-      require("copilot").setup({})
+      require("copilot").setup({
+        -- nes = {
+        --   enabled = true,
+        --   keymap = {
+        --     accept_and_goto = "<leader>p",
+        --     accept = false,
+        --     dismiss = "<Esc>",
+        --   },
+        -- },
+      })
     end,
+    keys = {
+      { "<leader>cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot" },
+      { "<leader>ce", "<cmd>Copilot enable<cr>",  desc = "Enable Copilot" },
+    }
   },
   -- {
   --   'zk-org/zk-nvim',

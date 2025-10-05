@@ -19,11 +19,16 @@ return {
     picker = {
       enabled = true,
     },
-    -- explorer = {
-    -- 	replace_netrw = true,
-    -- },
+    explorer = {
+      enabled = true,
+      replace_netrw = true,
+    },
+    styles = {
+      notification = {
+        wo = { wrap = true }
+      }
+    }
   },
-
   keys = {
     {
       "<c-p>",
@@ -123,6 +128,6 @@ return {
         Snacks.picker.notifications()
       end,
       desc = "Notification History",
-    },
-  },
+    }
+  }
 }

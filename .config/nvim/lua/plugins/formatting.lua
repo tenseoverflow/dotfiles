@@ -1,16 +1,14 @@
 return {
   "stevearc/conform.nvim",
-  ft = { "vue", "bash", "typescript", "typescriptreact", "javascript", "json", "jsonc", "markdown" },
+  ft = { "vue", "typescript", "typescriptreact", "javascript", "json", "jsonc" },
   opts = {
     formatters_by_ft = {
-      bash            = { "shfmt" },
       vue             = { "eslint_d" },
       typescript      = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       javascript      = { "eslint_d" },
       json            = { "prettierd" },
       jsonc           = { "prettierd" },
-      markdown        = { "prettierd" },
     },
     format_on_save = {
       -- These options will be passed to conform.format()
