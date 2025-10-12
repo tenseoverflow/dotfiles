@@ -36,20 +36,22 @@ return {
         local current_file = vim.fn.expand("%")
 
         Snacks.picker.smart({
-          multi = {
-            { finder = "buffers", current = false },
-            { finder = "recent",  exclude = { current_file } },
-            { finder = "files",   exclude = { current_file } },
-          },
+          -- multi = {
+          --   { finder = "buffers", current = false },
+          --   { finder = "recent",  exclude = { current_file } },
+          --   { finder = "files",   exclude = { current_file } },
+          -- },
         })
       end,
     },
+    { "<leader>/",  function() Snacks.picker.grep() end,                  desc = "Grep" },
     {
-      "<c-tab>",
+      "<leader>b",
       function()
         Snacks.picker.buffers()
       end,
     },
+    { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     -- {
     --   "<leader>fr",
     --   function()

@@ -12,6 +12,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "yamlls",
+          "sqruff",
           -- shell
           "fish_lsp",
           "bashls",
@@ -26,6 +27,7 @@ return {
           -- "jdtls",
           -- js
           "svelte",
+          "tailwindcss"
         },
       })
     end,
@@ -48,12 +50,12 @@ return {
         desc = "Buffer Diagnostics (Trouble)",
       },
       {
-        "<leader>cs",
+        "<leader>xs",
         "<cmd>Trouble symbols toggle focus=false<cr>",
         desc = "Symbols (Trouble)",
       },
       {
-        "<leader>cl",
+        "<leader>xt",
         "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
         desc = "LSP Definitions / references / ... (Trouble)",
       },
