@@ -104,3 +104,6 @@ vim.opt.backup = true
 vim.opt.backupdir = { vim.env.XDG_DATA_HOME .. "/nvim/backups" }
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.opt.writebackup = true
+
+-- Performance
+vim.opt.updatetime = 100
