@@ -27,7 +27,7 @@ return {
           -- "jdtls",
           -- js
           "svelte",
-          "tailwindcss"
+          "tailwindcss",
         },
       })
     end,
@@ -98,11 +98,10 @@ return {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
-    dependenices = { "copilotlsp-nvim/copilot-lsp" },
     config = function()
       require("copilot").setup({
         -- nes = {
-        --   enabled = true,
+        --   enabled = truae,
         --   keymap = {
         --     accept_and_goto = "<leader>p",
         --     accept = false,
@@ -114,7 +113,7 @@ return {
     keys = {
       { "<leader>cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot" },
       { "<leader>ce", "<cmd>Copilot enable<cr>",  desc = "Enable Copilot" },
-    }
+    },
   },
   -- {
   --   'zk-org/zk-nvim',
@@ -136,4 +135,75 @@ return {
   --     { '<leader>zt', [[<cmd>ZkTags<cr>]] },
   --   },
   -- },
+  {
+    "folke/sidekick.nvim",
+    opts = {
+      -- add any options here
+      cli = {
+        mux = {
+          backend = "tmux",
+          enabled = true,
+        },
+      },
+    },
+    keys = {
+      {
+        "<tab>",
+        function()
+          -- if there is a next edit, jump to it, otherwise apply it if any
+          if not require("sidekick").nes_jump_or_apply() then
+            return "<Tab>" -- fallback to normal tab
+          end
+        end,
+        expr = true,
+        desc = "Goto/Apply Next Edit Suggestion",
+      },
+      {
+        "<c-l>",
+        function()
+          require("sidekick.cli").toggle()
+        end,
+        desc = "Sidekick Toggle",
+        mode = { "n", "t", "i", "x" },
+      },
+      -- {
+      --   "<leader>ad",
+      --   function()
+      --     require("sidekick.cli").close()
+      --   end,
+      --   desc = "Detach a CLI Session",
+      -- },
+      {
+        "<leader>ct",
+        function()
+          require("sidekick.cli").send({ msg = "{this}" })
+        end,
+        mode = { "x", "n" },
+        desc = "Send This",
+      },
+      {
+        "<leader>cf",
+        function()
+          require("sidekick.cli").send({ msg = "{file}" })
+        end,
+        desc = "Send File",
+      },
+      -- {
+      --   "<leader>cv",
+      --   function()
+      --     require("sidekick.cli").send({ msg = "{selection}" })
+      --   end,
+      --   mode = { "x" },
+      --   desc = "Send Visual Selection",
+      -- },
+      {
+        "<leader>cp",
+        function()
+          require("sidekick.cli").prompt()
+        end,
+        mode = { "n", "x" },
+        desc = "Sidekick Select Prompt",
+      },
+    },
+  },
 }

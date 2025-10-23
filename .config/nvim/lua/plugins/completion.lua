@@ -3,22 +3,22 @@ return {
     "micangl/cmp-vimtex",
     ft = "tex",
     config = function()
-      require('cmp_vimtex').setup({})
+      require("cmp_vimtex").setup({})
     end,
   },
   {
-    'saghen/blink.compat',
-    version = '*',
+    "saghen/blink.compat",
+    version = "*",
     opts = { impersonate_nvim_cmp = false },
   },
   {
     "saghen/blink.cmp",
     lazy = false,
     dependencies = {
-      { 'L3MON4D3/LuaSnip',            version = 'v2.*' },
+      { "L3MON4D3/LuaSnip",            version = "v2.*" },
       { "micangl/cmp-vimtex" },
       { "fang2hou/blink-copilot" },
-      { "rafamadriz/friendly-snippets" }
+      { "rafamadriz/friendly-snippets" },
     },
 
     version = "1.*",
@@ -26,7 +26,9 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
-      keymap = { preset = "super-tab" },
+      keymap = {
+        preset = "super-tab",
+      },
       snippets = { preset = "luasnip" },
 
       appearance = {
@@ -50,8 +52,8 @@ return {
             score_offset = 1,
           },
           vimtex = {
-            name = 'vimtex',
-            module = 'blink.compat.source',
+            name = "vimtex",
+            module = "blink.compat.source",
             score_offset = 3,
           },
         },
@@ -81,14 +83,20 @@ return {
         enable_autosnippets = true,
         store_selection_keys = "<Tab>",
       })
-      vim.keymap.set({ "i" }, "<C-k>", function() ls.expand() end, { silent = true, desc = "expand autocomplete" })
-      vim.keymap.set({ "i", "s" }, "<C-j>", function() ls.jump(1) end, { silent = true, desc = "next autocomplete" })
-      vim.keymap.set({ "i", "s" }, "<C-L>", function() ls.jump(-1) end, { silent = true, desc = "previous autocomplete" })
+      vim.keymap.set({ "i" }, "<C-k>", function()
+        ls.expand()
+      end, { silent = true, desc = "expand autocomplete" })
+      vim.keymap.set({ "i", "s" }, "<C-j>", function()
+        ls.jump(1)
+      end, { silent = true, desc = "next autocomplete" })
+      vim.keymap.set({ "i", "s" }, "<C-L>", function()
+        ls.jump(-1)
+      end, { silent = true, desc = "previous autocomplete" })
       vim.keymap.set({ "i", "s" }, "<C-E>", function()
         if ls.choice_active() then
           ls.change_choice(1)
         end
       end, { silent = true, desc = "select autocomplete" })
-    end
-  }
+    end,
+  },
 }
