@@ -1,6 +1,5 @@
 return {
   "mfussenegger/nvim-lint",
-  enabled = false,
   ft = { "vue", "typescript", "typescriptreact", "javascript" },
   config = function()
     local util = require("lspconfig.util")
