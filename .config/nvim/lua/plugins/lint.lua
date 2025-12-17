@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
+  enabled = false,
   ft = { "vue", "typescript", "typescriptreact", "javascript" },
   config = function()
     local util = require("lspconfig.util")
@@ -9,7 +10,7 @@ return {
       typescript = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       javascript = { "eslint_d" },
-      sql = { "sqlfluff" },
+      sql = { "sqlruff" },
     }
 
     vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave", "BufEnter" }, {

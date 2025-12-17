@@ -81,11 +81,7 @@ end
 function components.file_info()
   local filename = vim.fn.expand("%:t")
   local filetype = vim.bo.filetype
-  local modified = vim.bo.modified and " +" or ""
-
-  if filename == "" then
-    return " [No Name] "
-  end
+  local modified = vim.bo.modified and " [+]" or ""
 
   local file_icon = ""
   if vim.fn.exists("*WebDevIconsGetFileTypeSymbol") == 1 then
@@ -112,12 +108,12 @@ function M.setup_statusbar()
   -- Set statusline with improved formatting and colors
   vim.o.statusline = table.concat({
     -- File info section (left side)
-    -- "%#StatusLine#",
-    -- components.file_info(),
+    "%#StatusLine#",
+    components.file_info(),
 
     -- Git branch section
-    "%#StatusLineBranch#",
-    components.git_branch(),
+    -- "%#StatusLineBranch#",
+    -- components.git_branch(),
 
     -- Diagnostics section
     "%#StatusLineDiag#",
@@ -127,8 +123,8 @@ function M.setup_statusbar()
     "%=",
 
     -- LSP status section
-    "%#StatusLineLSP#",
-    components.lsp_status(),
+    -- "%#StatusLineLSP#",
+    -- components.lsp_status(),
 
     -- File format section
     -- "%#StatusLineFormat#",
@@ -146,25 +142,25 @@ function M.setup_statusbar()
   vim.o.rulerformat = "%l:%c %p%%"
 
   -- Define custom highlight groups for better visual separation
-  M.setup_highlights()
+  -- M.setup_highlights()
 end
 
--- Setup custom highlight groups
-function M.setup_highlights()
-  -- Define highlight groups for different sections
-  vim.api.nvim_create_autocmd("ColorScheme", {
-    callback = function()
-      vim.api.nvim_set_hl(0, "StatusLineBranch", { fg = "#98be65", bg = "#1e2326", bold = true })
-      vim.api.nvim_set_hl(0, "StatusLineDiag", { fg = "#ff6c6b", bg = "#1e2326" })
-      vim.api.nvim_set_hl(0, "StatusLineLSP", { fg = "#7aa2f7", bg = "#1e2326" })
-      vim.api.nvim_set_hl(0, "StatusLineFormat", { fg = "#9ca0a4", bg = "#1e2326" })
-      vim.api.nvim_set_hl(0, "StatusLineLocation", { fg = "#c678dd", bg = "#1e2326", bold = true })
-    end,
-  })
-
-  -- Trigger the colorscheme event to set initial colors
-  vim.cmd("doautocmd ColorScheme")
-end
+-- -- Setup custom highlight groups
+-- function M.setup_highlights()
+--   -- Define highlight groups for different sections
+--   vim.api.nvim_create_autocmd("ColorScheme", {
+--     callback = function()
+--       vim.api.nvim_set_hl(0, "StatusLineBranch", { fg = "#98be65", bg = "#1e2326", bold = true })
+--       vim.api.nvim_set_hl(0, "StatusLineDiag", { fg = "#ff6c6b", bg = "#1e2326" })
+--       vim.api.nvim_set_hl(0, "StatusLineLSP", { fg = "#7aa2f7", bg = "#1e2326" })
+--       vim.api.nvim_set_hl(0, "StatusLineFormat", { fg = "#9ca0a4", bg = "#1e2326" })
+--       vim.api.nvim_set_hl(0, "StatusLineLocation", { fg = "#c678dd", bg = "#1e2326", bold = true })
+--     end,
+--   })
+--
+--   -- Trigger the colorscheme event to set initial colors
+--   vim.cmd("doautocmd ColorScheme")
+-- end
 
 -- Update statusbar function
 function M.update_statusbar()

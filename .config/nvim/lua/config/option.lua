@@ -89,6 +89,7 @@ vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
 vim.opt.shada = { "!", "'1000", "<50", "s10", "h" } -- Increase the shadafile size so that history is longer
 vim.opt.clipboard = "unnamedplus"
+vim.cmd.filetype("plugin indent on")
 
 -- search
 vim.opt.hlsearch = true

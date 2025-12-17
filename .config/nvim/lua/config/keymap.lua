@@ -8,3 +8,5 @@ vim.keymap.set("n", "<leader>l", "<C-w>l")
 vim.keymap.set("n", "<leader>h", "<C-w>h")
 
 vim.keymap.set("n", "<leader>q", "gra")
+
+vim.keymap.set("n", "<leader>tt", "<Cmd>tabnew<CR>")

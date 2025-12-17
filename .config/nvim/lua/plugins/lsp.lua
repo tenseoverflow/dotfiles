@@ -12,28 +12,21 @@ return {
         ensure_installed = {
           "lua_ls",
           "yamlls",
-          "sqruff",
-          -- shell
+          -- "sqruff",
           "fish_lsp",
           "bashls",
-          -- C
           "clangd",
-          -- python
           "pyrefly",
           "ruff",
           "taplo",
-          -- java
           -- "java-language-server",
           -- "jdtls",
-          -- js
           "svelte",
           "tailwindcss",
         },
       })
     end,
   },
-  -- LSP configuration is now handled by Neovim 11 built-in LSP in config/lsp.lua
-  -- Only keeping Mason for LSP server installation
   {
     "folke/trouble.nvim",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -72,17 +65,6 @@ return {
     },
   },
   {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    config = function()
-      require("lazydev").setup({
-        library = {
-          { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-        },
-      })
-    end,
-  },
-  {
     "luckasRanarison/tailwind-tools.nvim",
     ft = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "svelte", "vue" },
     name = "tailwind-tools",
@@ -91,8 +73,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-lua/plenary.nvim",
     },
-    ---@type TailwindTools.Option
-    opts = {},
   },
   {
     "zbirenbaum/copilot.lua",
@@ -115,26 +95,6 @@ return {
       { "<leader>ce", "<cmd>Copilot enable<cr>",  desc = "Enable Copilot" },
     },
   },
-  -- {
-  --   'zk-org/zk-nvim',
-  --   ft = 'markdown',
-  --   config = function()
-  --     require('zk').setup {
-  --       picker = 'snacks_picker',
-  --       lsp = {
-  --         config = {
-  --           capabilities = require 'j.plugins.lsp.capabilities',
-  --         },
-  --       },
-  --     }
-  --   end,
-  --   keys = {
-  --     { '<leader>zn', [[:ZkNew {title=''}<left><left>]], mode = 'n' },
-  --     { '<leader>zn', [[<cmd>ZkNewFromTitleSelection<cr>]], mode = 'x' },
-  --     { '<leader>zl', [[<cmd>ZkNotes<cr>]] },
-  --     { '<leader>zt', [[<cmd>ZkTags<cr>]] },
-  --   },
-  -- },
   {
     "folke/sidekick.nvim",
     opts = {
