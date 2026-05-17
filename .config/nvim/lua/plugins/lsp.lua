@@ -1,30 +1,31 @@
 return {
   {
     "mason-org/mason-lspconfig.nvim",
+    -- Mason must load before mason-lspconfig; nvim-lspconfig supplies defaults merged with ~/.config/nvim/lsp/*.lua
     dependencies = {
-      "mason-org/mason.nvim",
+      { "mason-org/mason.nvim", lazy = false, opts = {} },
       "neovim/nvim-lspconfig",
     },
     lazy = false,
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "yamlls",
-          -- "sqruff",
-          "fish_lsp",
-          "bashls",
-          "clangd",
-          "pyrefly",
-          "ruff",
-          "taplo",
-          -- "java-language-server",
-          -- "jdtls",
-          "svelte",
-          "tailwindcss",
-        },
-      })
+    opts = {
+      -- Installs binaries and calls vim.lsp.enable() per server (|:h mason-lspconfig.nvim| automatic_enable).
+      ensure_installed = {
+        "lua_ls",
+        "yamlls",
+        -- "sqruff",
+        "fish_lsp",
+        "bashls",
+        "clangd",
+        "pyrefly",
+        "ruff",
+        "taplo",
+        "ltex_plus",
+        "svelte",
+        "tailwindcss",
+      },
+    },
+    config = function(_, opts)
+      require("mason-lspconfig").setup(opts)
     end,
   },
   {

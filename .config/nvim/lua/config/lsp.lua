@@ -1,15 +1,10 @@
--- Options for autocompletion
+-- LSP: Mason + mason-lspconfig install servers and vim.lsp.enable() them automatically.
+-- ~/.config/nvim/lsp/*.lua only augments upstream nvim-lspconfig defaults (:h lsp-quickstart-config).
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    -- if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
-    --   vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
-    --   vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    --   vim.keymap.set("i", "<C-Space>", function()
-    --     vim.lsp.completion.get()
-    --   end)
-    -- end
 
     if client.name == "biome" then
       vim.api.nvim_create_autocmd("BufWritePre", {
@@ -40,19 +35,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 vim.opt.pumheight = 13
 
--- Configure LSP servers using Neovim 11 built-in LSP configuration
--- Server configurations are loaded from ~/.config/nvim/lsp/ directory
-
--- Enable all configured LSP servers
--- vim.lsp.enable("lua_ls")
--- vim.lsp.enable("clangd")
--- vim.lsp.enable("pyright")
--- vim.lsp.enable("ruff")
-vim.lsp.enable("ltex-ls-plus")
-vim.lsp.enable("svelte-language-server")
--- vim.lsp.enable("vtsls")
-
--- Configure diagnostics
 vim.diagnostic.config({
   virtual_text = false,
   virtual_lines = { current_line = true },

@@ -3,41 +3,23 @@ return {
     "navarasu/onedark.nvim",
     priority = 1000,
     config = function()
-      require("onedark").setup({
-        style = "deep",
-
-        lualine = {
-          transparent = true, -- lualine center bar transparency
-        },
-      })
-
+      require("onedark").setup({ style = "deep" })
       require("onedark").load()
     end,
   },
-  -- {
-  --   'projekt0n/github-nvim-theme',
-  --   name = 'github-theme',
-  --   lazy = false,  -- make sure we load this during startup if it is your main colorscheme
-  --   priority = 1000, -- make sure to load this before all the other start plugins
-  --   config = function()
-  --     vim.cmd('colorscheme github_dark_dimmed')
-  --   end,
-  -- },
-  -- {
-  --   "CopilotC-Nvim/CopilotChat.nvim",
-  --   enabled = false,
-  --   dependencies = {
-  --     { "nvim-lua/plenary.nvim", branch = "master" },
-  --   },
-  --   build = "make tiktoken",
-  --   opts = {
-  --     model = "gpt-4.1",
-  --     auto_insert_mode = true,
-  --   },
-  --   keys = {
-  --     { "<leader>cc", "<cmd>CopilotChat<cr>" },
-  --   },
-  -- },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      {
+        "<leader>ft",
+        function()
+          Snacks.picker.todo_comments({ keywords = { "TODO", "FIX" } })
+        end,
+        desc = "Todo/Fix",
+      },
+    },
+  },
   {
     "lervag/vimtex",
     -- lazy = false,

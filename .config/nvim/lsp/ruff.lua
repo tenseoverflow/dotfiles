@@ -1,10 +1,8 @@
+--- Hover from pyrefly; ruff stays lint/format only. Merged with nvim-lspconfig ruff (:h lsp-config-ruff).
+---@type vim.lsp.Config
 return {
-  cmd = { "ruff" },
-  filetypes = { "python" },
-  root_markers = { "pyproject.toml", "ruff.toml", ".git" },
   on_attach = function(client, _)
     if client.name == "ruff" then
-      -- disable hover in favor of pyright
       client.server_capabilities.hoverProvider = false
     end
   end,

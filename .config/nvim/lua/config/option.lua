@@ -108,3 +108,6 @@ vim.opt.writebackup = true
 
 -- Performance
 vim.opt.updatetime = 100
+
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
